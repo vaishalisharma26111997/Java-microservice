@@ -1,6 +1,8 @@
 server:
   port: 8082
 spring:
+  application:
+    name: HOTEL-SERVICE
   datasource:
     url: jdbc:mysql://localhost:3306/hotelservicedb
     password: root
@@ -9,3 +11,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+    instance:
+      prefer-ip-address: true
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        defaultZone: http://localhost:8761
