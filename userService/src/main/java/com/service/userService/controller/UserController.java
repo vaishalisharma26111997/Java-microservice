@@ -19,6 +19,7 @@ import java.util.List;
 public class UserController {
 @Autowired
 private UserService userService;
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
     @PostMapping
     public ResponseEntity<User>createUser(@RequestBody User user)
 {
